@@ -1,13 +1,13 @@
-# This program checks the age and categorizes the person into different age groups.
-# It also demonstrates exception handling using try and except.
+error1 = "Invalid input: Age cannot be a non-number."
+error2 = "Invalid input: Age cannot be negative."
 
 try:
-    # Input: Get age from the user
+    # Get user input
     user_input = int(input("Please enter your age: "))
 
     # Check the age category
     if user_input < 0:
-        raise ValueError("Age cannot be negative.")
+        raise ValueError(error2)
     elif user_input < 13:
         print("You are categorized as: Child")
     elif user_input < 20:
@@ -18,4 +18,4 @@ try:
         print("You are categorized as: Senior")
         
 except ValueError:
-    print("Invalid input: Age cannot be a non-number.")
+    print(error1)
